@@ -1,25 +1,23 @@
 package com.example.chenningzhang.moovgroov;
 
-import android.app.Activity;
-
 import android.app.ActionBar;
+import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
-import android.content.Context;
-import android.os.Build;
+import android.net.Uri;
 import android.os.Bundle;
-import android.view.Gravity;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.widget.DrawerLayout;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.support.v4.widget.DrawerLayout;
-import android.widget.ArrayAdapter;
-import android.widget.TextView;
 
-public class MainActivity extends Activity
-        implements NavigationDrawerFragment.NavigationDrawerCallbacks {
+public class MainActivity extends FragmentActivity
+        implements NavigationDrawerFragment.NavigationDrawerCallbacks, ProjectFragment.OnFragmentInteractionListener,
+        SoundFragment.OnFragmentInteractionListener,
+        BeatFragment.OnFragmentInteractionListener {
 
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
@@ -50,9 +48,31 @@ public class MainActivity extends Activity
     public void onNavigationDrawerItemSelected(int position) {
         // update the main content by replacing fragments
         FragmentManager fragmentManager = getFragmentManager();
-        fragmentManager.beginTransaction()
-                .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
-                .commit();
+
+        switch(position){
+            case 0:
+                mTitle = getString(R.string.title_section1);
+                fragmentManager.beginTransaction().replace(R.id.container, ProjectFragment.newInstance(position))
+                    .commit();
+                    break;
+            case 1:
+                mTitle = getString(R.string.title_section2);
+                fragmentManager.beginTransaction().replace(R.id.container, BeatFragment.newInstance(position))
+                    .commit();
+                break;
+            case 2:
+                mTitle = getString(R.string.title_section3);
+                fragmentManager.beginTransaction().replace(R.id.container, SoundFragment.newInstance(position))
+                    .commit();
+                break;
+        }
+
+
+
+
+
+
+
     }
 
     public void onSectionAttached(int number) {
@@ -67,6 +87,7 @@ public class MainActivity extends Activity
                 mTitle = getString(R.string.title_section3);
                 break;
         }
+
     }
 
     public void restoreActionBar() {
@@ -143,6 +164,11 @@ public class MainActivity extends Activity
             ((MainActivity) activity).onSectionAttached(
                     getArguments().getInt(ARG_SECTION_NUMBER));
         }
+
+
     }
+    public void onFragmentInteraction(Uri u){}
+
+
 
 }

@@ -1,0 +1,14 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.chenningzhang.moovgroov.ProjectFragment">
+
+    <ImageButton
+        android:id="@+id/proj1button"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:src="@drawable/proj1"
+        android:background="#000000"
+        android:scaleType="fitXY"/>
+
+</FrameLayout>
