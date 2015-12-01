@@ -17,7 +17,10 @@ import android.view.ViewGroup;
 public class MainActivity extends FragmentActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks, ProjectFragment.OnFragmentInteractionListener,
         SoundFragment.OnFragmentInteractionListener,
-        BeatFragment.OnFragmentInteractionListener {
+        BeatFragment.OnFragmentInteractionListener,
+        AddNewFragment.OnFragmentInteractionListener,
+        RecordingFragment.OnFragmentInteractionListener,
+        BeatComplete.OnFragmentInteractionListener {
 
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.

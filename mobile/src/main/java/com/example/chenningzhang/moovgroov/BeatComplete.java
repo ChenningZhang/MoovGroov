@@ -1,28 +1,26 @@
 package com.example.chenningzhang.moovgroov;
 
 import android.app.Activity;
-import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
+import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link BeatFragment.OnFragmentInteractionListener} interface
+ * {@link BeatComplete.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link BeatFragment#newInstance} factory method to
+ * Use the {@link BeatComplete#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class BeatFragment extends Fragment {
+public class BeatComplete extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -40,19 +38,17 @@ public class BeatFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment BeatFragment.
+     * @return A new instance of fragment BeatComplete.
      */
     // TODO: Rename and change types and number of parameters
-    public static BeatFragment newInstance(int pos) {
-        BeatFragment fragment = new BeatFragment();
+    public static BeatComplete newInstance() {
+        BeatComplete fragment = new BeatComplete();
         Bundle args = new Bundle();
-        args.putInt("position", pos);
-
-        fragment.setArguments(args);
+        //fragment.setArguments(args);
         return fragment;
     }
 
-    public BeatFragment() {
+    public BeatComplete() {
         // Required empty public constructor
     }
 
@@ -68,18 +64,29 @@ public class BeatFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_beat, container, false);
-        final ImageButton newButton = (ImageButton) view.findViewById(R.id.newButton);
-        newButton.setOnClickListener(new View.OnClickListener() {
+        // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_beat_complete, container, false);
+        final ImageButton save = (ImageButton) view.findViewById(R.id.saveButton);
+        final ImageButton reset = (ImageButton) view.findViewById(R.id.resetButton);
+        save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.beatFragment, AddNewFragment.newInstance());
+                fragmentTransaction.replace(R.id.beatComplete, BeatFragment.newInstance(1));
                 fragmentTransaction.commit();
             }
         });
-        // Inflate the layout for this fragment
+
+        reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.beatComplete, RecordingFragment.newInstance());
+                fragmentTransaction.commit();
+            }
+        });
         return view;
     }
 

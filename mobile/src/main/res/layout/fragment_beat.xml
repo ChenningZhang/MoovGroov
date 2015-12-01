@@ -1,4 +1,6 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    android:id="@+id/beatFragment"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.chenningzhang.moovgroov.BeatFragment">
@@ -10,4 +12,13 @@
         android:src="@drawable/beat1"
         android:background="#000000"
         android:scaleType="fitXY"/>
+
+    <ImageButton
+        android:layout_width="107dp"
+        android:layout_height="89dp"
+        android:id="@+id/newButton"
+        android:layout_gravity="right|bottom"
+        android:clickable="true"
+        android:background="@drawable/new_button" />
+
 </FrameLayout>
