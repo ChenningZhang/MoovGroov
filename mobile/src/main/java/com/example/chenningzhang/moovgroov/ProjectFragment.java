@@ -2,7 +2,6 @@ package com.example.chenningzhang.moovgroov;
 
 import android.app.Activity;
 import android.app.Fragment;
-import android.app.FragmentManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -34,9 +33,6 @@ public class ProjectFragment extends Fragment{
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
      * @return A new instance of fragment ProjectFragment.
      */
     // TODO: Rename and change types and number of parameters
