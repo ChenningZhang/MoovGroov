@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="108dp"
+    android:id="@+id/project1"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentEnd="true"
+    android:clickable="true"
+    android:background="#333333">
+
+    <TextView
+        android:id="@+id/sound1_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:text="Project1"
+        android:paddingTop="16dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/list_item_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:textSize="20dp"
+        android:text="by BLANC"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/sound1_name"
+        android:layout_alignStart="@+id/sound1_name" />
+
+    <TextView
+        android:id="@+id/project1_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17dp"
+        android:text="00:02:19"
+        android:textColor="#0ABAB5"
+        android:layout_marginRight="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="40dp" />
+
+</RelativeLayout>
+
