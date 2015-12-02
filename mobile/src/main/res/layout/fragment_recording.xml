@@ -1,0 +1,16 @@
+<FrameLayout
+    android:id="@+id/recordingBeat"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.chenningzhang.moovgroov.RecordingFragment">
+
+    <ImageButton
+        android:id="@+id/recordingScreen"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:src="@drawable/recording_screen"
+        android:background="#000000"
+        android:scaleType="fitXY"/>
+
+</FrameLayout>

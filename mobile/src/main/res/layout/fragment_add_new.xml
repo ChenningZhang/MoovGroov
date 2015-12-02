@@ -1,0 +1,24 @@
+<FrameLayout
+    android:id="@+id/addNew"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.chenningzhang.moovgroov.AddNewFragment">
+
+    <ImageButton
+        android:id="@+id/addNewScreen"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:src="@drawable/add_new"
+        android:background="#000000"
+        android:scaleType="fitXY"/>
+
+    <ImageButton
+        android:layout_width="71dp"
+        android:layout_height="59dp"
+        android:id="@+id/newBeatButton"
+        android:layout_marginLeft="280dp"
+        android:layout_marginTop="355dp"
+        android:background="@drawable/new_beat_button"/>
+
+</FrameLayout>

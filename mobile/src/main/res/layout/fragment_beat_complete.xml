@@ -1,0 +1,32 @@
+<FrameLayout
+    android:id="@+id/beatComplete"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.chenningzhang.moovgroov.BeatComplete">
+
+    <ImageButton
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:src="@drawable/recording_complete"
+        android:background="#000000"
+        android:scaleType="fitXY"/>
+
+    <ImageButton
+        android:layout_width="94dp"
+        android:layout_height="79dp"
+        android:id="@+id/saveButton"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/save_button" />
+
+    <ImageButton
+        android:layout_width="33dp"
+        android:layout_height="27dp"
+        android:id="@+id/resetButton"
+        android:layout_gravity="right|bottom"
+        android:layout_marginRight="85dp"
+        android:layout_marginBottom="42dp"
+        android:background="@drawable/reset_button" />
+
+</FrameLayout>
