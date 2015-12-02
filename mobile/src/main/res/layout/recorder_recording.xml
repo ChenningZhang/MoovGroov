@@ -18,7 +18,8 @@
         android:layout_alignParentStart="true"
         android:background="@drawable/recording1"
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp" />
+        android:layout_marginRight="10dp"
+        android:clickable="true" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -31,7 +32,8 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp" />
+        android:layout_marginRight="10dp"
+        android:clickable="true" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -41,7 +43,8 @@
         android:layout_below="@+id/recording2"
         android:layout_alignStart="@+id/recording2"
         android:layout_marginTop="10dp"
-        android:layout_alignEnd="@id/recording2" />
+        android:layout_alignEnd="@id/recording2"
+        android:clickable="true" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -51,7 +54,8 @@
         android:layout_alignStart="@+id/recording3"
         android:layout_alignEnd="@id/recording3"
         android:background="@drawable/record4"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="10dp"
+        android:clickable="true" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -60,6 +64,7 @@
         android:layout_below="@+id/recording4"
         android:layout_centerHorizontal="true"
         android:background="@drawable/record_button"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="10dp"
+        android:clickable="true" />
 
 </RelativeLayout>
