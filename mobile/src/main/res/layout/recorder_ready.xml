@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="#000000"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:id="@+id/recorder">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/recorded1"
+        android:layout_alignParentTop="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/record1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:clickable="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/recorded2"
+        android:layout_below="@+id/recorded1"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/record2"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:clickable="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/recording3"
+        android:background="@drawable/record3"
+        android:layout_below="@+id/recorded2"
+        android:layout_alignStart="@+id/recorded2"
+        android:layout_marginTop="10dp"
+        android:layout_alignEnd="@id/recorded2"
+        android:clickable="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/recorded4"
+        android:layout_below="@+id/recording3"
+        android:layout_alignStart="@+id/recording3"
+        android:layout_alignEnd="@id/recording3"
+        android:background="@drawable/record4"
+        android:layout_marginTop="10dp"
+        android:clickable="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/record_button"
+        android:layout_below="@+id/recorded4"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/record_button"
+        android:layout_marginTop="10dp"
+        android:clickable="true" />
+
+</RelativeLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#333333"
+    android:id="@+id/beatsList">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/beat1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:clickable="true"
+        android:layout_marginBottom="400dp">
+
+        <TextView
+            android:id="@+id/sound1_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:text="Drum 1"
+            android:paddingTop="16dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#ffffff" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/beat1_image"
+            android:background="@drawable/drum1"
+            android:layout_marginRight="20dp"
+            android:layout_toEndOf="@+id/sound1_name"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="13dp"
+            android:layout_alignBottom="@+id/sound1_name" />
+
+    </RelativeLayout>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_new_button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="30dp"
+        android:clickable="true"
+        android:padding="40dp"
+        android:background="@drawable/new_button"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="270dp" />
+
+</RelativeLayout>
