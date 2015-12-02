@@ -4,6 +4,7 @@ import android.app.ActionBar;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -45,6 +46,20 @@ public class MainActivity extends FragmentActivity
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
+
+    }
+
+    public void onResume() {
+        super.onResume();
+        Intent iBeatComplete = getIntent();
+        if (iBeatComplete.getExtras() != null) {
+            if (iBeatComplete.getStringExtra("SOURCE").equals("beatComplete")) {
+                FragmentManager fragmentManager = getFragmentManager();
+                fragmentManager.beginTransaction().replace(R.id.container, BeatComplete.newInstance())
+                        .commit();
+            }
+        }
+
     }
 
     @Override
