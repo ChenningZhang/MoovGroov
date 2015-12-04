@@ -9,8 +9,11 @@ import android.widget.Toast;
 import com.google.android.gms.wearable.MessageEvent;
 import com.google.android.gms.wearable.WearableListenerService;
 
+import java.nio.charset.StandardCharsets;
+
 public class MobileListenerService extends WearableListenerService {
     private static final String FINISH_WATCH_BEATS_ACTIVITY = "/finish_watch_beats_activity";
+    private static final String RECORD_BEATS_ACTIVITY = "/record_beats_activity";
 
     public void onCreate() {
         super.onCreate();
@@ -27,7 +30,11 @@ public class MobileListenerService extends WearableListenerService {
             intent.putExtra("SOURCE", "beatComplete");
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
-        } else {
+        } else if (messageEvent.getPath().equalsIgnoreCase(RECORD_BEATS_ACTIVITY)){
+            String value = new String(messageEvent.getData(), StandardCharsets.UTF_8);
+            Toast.makeText(this, "BEAT DETECTED: " + value, Toast.LENGTH_SHORT).show();
+            // TODO Figure out what to do with this data
+       } else {
             super.onMessageReceived(messageEvent);
         }
 
