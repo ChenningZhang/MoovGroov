@@ -77,14 +77,8 @@ public class MainActivity extends AppCompatActivity {
                         } catch(InterruptedException ex) {
                             Thread.currentThread().interrupt();
                         }
-
-
                     }
-
-
-
                 }
-
             }
         });
     }

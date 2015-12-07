@@ -37,4 +37,12 @@
         android:id="@+id/btnP3"
         android:layout_below="@+id/btnP2"
         android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="play loop 1"
+        android:id="@+id/btnL1"
+        android:layout_below="@+id/btnP3"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
